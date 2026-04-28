@@ -2,9 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+
 function MyNav() {
   return (
-    <Navbar expand="md" className="bg-body-tertiary">
+    <Navbar expand="md"  style={{ backgroundColor: '#9bc072', color: '#072b06' }}>
       <Container>
         <Navbar.Brand href="#home">EpiBooks</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

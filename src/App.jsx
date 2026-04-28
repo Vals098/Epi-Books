@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { Container, Row, Col } from "react-bootstrap"
 // import the NavBar
 import MyNav from "./components/MyNav"
+// import the footer
+import MyFooter from "./components/MyFooter"
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
           </Row>
         </Container>
       </main>
-      <footer></footer>
+      <footer>
+        <MyFooter></MyFooter>
+      </footer>
     </div>
   )
 }
