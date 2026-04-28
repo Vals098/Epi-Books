@@ -1,19 +1,22 @@
 import books from "../data/fantasy.json"
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 
-
 function AllTheBooks() {
   return (
     <Container>
-      <Row className="justify-content-center mt-3">
+      <Row className="justify-content-center mt-3 g-3">
         {books.map((book) => (
           <Col xs={12} lg={3} key={book.asin}>
-            <Card>
+            <Card className="h-100 d-flex flex-column">
               <Card.Img variant="top" src={book.img} />
-              <Card.Body>
+
+              <Card.Body className="d-flex flex-column">
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>{book.price}€</Card.Text>
-                <Button variant="success">Compra</Button>
+
+                <Button variant="success" className="mt-auto">
+                  Compra
+                </Button>
               </Card.Body>
             </Card>
           </Col>
