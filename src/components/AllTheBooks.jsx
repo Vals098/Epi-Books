@@ -13,7 +13,7 @@ function AllTheBooks() {
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>{book.price}€</Card.Text>
-                <Button variant="primary">Compra</Button>
+                <Button variant="success">Compra</Button>
               </Card.Body>
             </Card>
           </Col>
