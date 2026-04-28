@@ -7,6 +7,8 @@ import { Container, Row, Col } from "react-bootstrap"
 import MyNav from "./components/MyNav"
 // import the footer
 import MyFooter from "./components/MyFooter"
+// import the Alert
+import Welcome from "./components/Welcome"
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
     </div>
   </div> */}
       <main className="flex-grow-1">
+        <Welcome></Welcome>
         {/* with react-bootstrap */}
         <Container>
           <Row>

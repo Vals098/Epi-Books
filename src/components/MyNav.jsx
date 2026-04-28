@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function MyNav() {
   return (
-    <Navbar expand="md"  style={{ backgroundColor: '#9bc072', color: '#072b06' }}>
+    <Navbar expand="md"  style={{ backgroundColor: '#81bb9c', color: '#072b06' }}>
       <Container>
         <Navbar.Brand href="#home">EpiBooks</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
