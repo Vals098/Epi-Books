@@ -3,11 +3,15 @@ import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 // import react-bootstrap
 import { Container, Row, Col } from "react-bootstrap"
+// import the NavBar
+import MyNav from "./components/MyNav"
 
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      <header></header>
+      <header>
+        <MyNav></MyNav>
+      </header>
       {/* without react-bootstrap */}
       {/* <div className="container">
     <div className="row">
