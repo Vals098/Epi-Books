@@ -4,9 +4,9 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap"
 function AllTheBooks() {
   return (
     <Container>
-      <Row className="justify-content-center mt-3 g-3">
+      <Row className="justify-content-center m-3 g-3">
         {books.map((book) => (
-          <Col xs={12} lg={3} key={book.asin}>
+          <Col xs={6} md={4} lg={3} key={book.asin}>
             <Card className="h-100 d-flex flex-column">
               <Card.Img variant="top" src={book.img} />
 
