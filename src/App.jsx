@@ -9,6 +9,8 @@ import MyNav from "./components/MyNav"
 import MyFooter from "./components/MyFooter"
 // import the Alert
 import Welcome from "./components/Welcome"
+// import books
+import AllTheBooks from "./components/AllTheBooks"
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
         {/* with react-bootstrap */}
         <Container>
           <Row>
-            <Col></Col>
+            <Col>
+              <AllTheBooks></AllTheBooks>
+            </Col>
           </Row>
         </Container>
       </main>
