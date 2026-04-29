@@ -10,7 +10,10 @@ import MyFooter from "./components/MyFooter"
 // import the Alert
 import Welcome from "./components/Welcome"
 // import books
-import AllTheBooks from "./components/AllTheBooks"
+// import AllTheBooks from "./components/AllTheBooks"
+import books from "./data/fantasy.json"
+import BookList from "./components/BookList"
+
 
 function App() {
   return (
@@ -30,7 +33,8 @@ function App() {
         <Container>
           <Row>
             <Col>
-              <AllTheBooks></AllTheBooks>
+              <BookList books={books} />
+
             </Col>
           </Row>
         </Container>
