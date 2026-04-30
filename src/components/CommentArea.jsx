@@ -2,6 +2,8 @@ const MY_TOKEN =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWYzNjA1OGYwNDIwZDAwMTUxNTVhYzEiLCJpYXQiOjE3Nzc1NTc1OTIsImV4cCI6MTc3ODc2NzE5Mn0.Oa97vw7Dmu7M4EAK67lL6VGjCio3AF8Gk-Ih4diF0AQ"
 
 import { Component } from "react"
+import CommentsList from "./CommentsList"
+import AddComment from "./AddComment"
 
 class CommentArea extends Component {
   state = {
@@ -48,9 +50,7 @@ class CommentArea extends Component {
     this.fetchComments()
   }
 
-
   render() {
-
     console.log(this.props.asin)
 
     return (
@@ -59,13 +59,16 @@ class CommentArea extends Component {
 
         {this.state.isLoading && <p>Loading...</p>}
 
-        {!this.state.isLoading &&
-          this.state.comments.map((comment) => (
-            <div key={comment._id}>
-              <p>{comment.comment}</p>
-              <small>⭐ {comment.rate}</small>
-            </div>
-          ))}
+        {!this.state.isLoading && (
+          <>
+            <AddComment
+              asin={this.props.asin}
+              refreshComments={this.fetchComments}
+            />
+
+            <CommentsList comments={this.state.comments} />
+          </>
+        )}
       </div>
     )
   }
