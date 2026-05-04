@@ -1,16 +1,8 @@
 import { Component } from "react"
 import { Card, Button } from "react-bootstrap"
-import CommentArea from "./CommentArea"
+
 
 class SingleBook extends Component {
-  state = {
-    selected: false,
-  }
-  toggleSelected = () => {
-    this.setState({
-      selected: !this.state.selected,
-    })
-  }
 
   render() {
     const book = this.props.book
@@ -18,13 +10,13 @@ class SingleBook extends Component {
     return (
       <>
         <Card
-          onClick={this.toggleSelected}
+          onClick={() => this.props.onSelect(book.asin)}
           className="h-100 d-flex flex-column"
           style={{
-            boxShadow: this.state.selected
+            boxShadow: this.props.isSelected
               ? "0 4px 12px rgba(0, 128, 0, 0.5)"
               : "none",
-            border: this.state.selected
+            border: this.props.isSelected
               ? "1px solid rgba(0, 128, 0, 0.7)"
               : "1px solid grey",
             transition: "all 0.3s ease",
@@ -39,14 +31,7 @@ class SingleBook extends Component {
             <Button variant="success" className="mt-auto">
               Add to cart
             </Button>
-            {/* if selected is true show comment area */}
-            <div className="mt-3">
-              {this.state.selected && (
-                <div className="mt-3">
-                  <CommentArea asin={book.asin} />
-                </div>
-              )}
-            </div>
+      
           </Card.Body>
         </Card>
       </>
