@@ -1,22 +1,20 @@
-import { Component } from "react"
+
 import { Card, Button } from "react-bootstrap"
 
-
-class SingleBook extends Component {
-
-  render() {
-    const book = this.props.book
+const SingleBook = function(props) {
+ 
+    const book = props.book
 
     return (
       <>
         <Card
-          onClick={() => this.props.onSelect(book.asin)}
+          onClick={() => props.onSelect(book.asin)}
           className="h-100 d-flex flex-column"
           style={{
-            boxShadow: this.props.isSelected
+            boxShadow: props.isSelected
               ? "0 4px 12px rgba(0, 128, 0, 0.5)"
               : "none",
-            border: this.props.isSelected
+            border: props.isSelected
               ? "1px solid rgba(0, 128, 0, 0.7)"
               : "1px solid grey",
             transition: "all 0.3s ease",
@@ -31,12 +29,11 @@ class SingleBook extends Component {
             <Button variant="success" className="mt-auto">
               Add to cart
             </Button>
-      
           </Card.Body>
         </Card>
       </>
     )
-  }
+  
 }
 
 export default SingleBook
