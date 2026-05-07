@@ -13,3 +13,4 @@ describe("Welcome", () => {
         expect(welcomeComponent).toBeInTheDocument()
     })
 })
+// verified

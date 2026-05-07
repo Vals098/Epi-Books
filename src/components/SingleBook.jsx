@@ -19,6 +19,7 @@ const SingleBook = function(props) {
               : "1px solid grey",
             transition: "all 0.3s ease",
           }}
+          data-testid="book-card"
         >
           <Card.Img variant="top" src={book.img} />
 
